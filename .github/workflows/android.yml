@@ -31,7 +31,7 @@ on:
 
 jobs:
   build:
-    runs-on: monkci-ubuntu-22.04-32
+    runs-on: monkci-ubuntu-24.04-32
     steps:
     - uses: actions/checkout@v6
     - name: Install deps
