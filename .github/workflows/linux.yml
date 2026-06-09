@@ -180,7 +180,7 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - uses: calebevans/gha-failure-analysis@v1
+      - uses: calebevans/gha-failure-analysis@main
         with:
           llm-provider: openai
           llm-model: gpt-4o
