@@ -171,3 +171,20 @@ jobs:
       - name: Test
         run: |
           ./bin/luantiserver --run-unittests
+
+  analyze:
+    needs: [gcc_9, gcc_14, clang_11, clang_20, clang_prometheus_arm]
+    if: failure()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: calebevans/gha-failure-analysis@v1
+        with:
+          llm-provider: openai
+          llm-model: gpt-4o
+          llm-api-key: ${{ secrets.OPEN_AI_KEY }}
+          post-pr-comment: false
+
+  
