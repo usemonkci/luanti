@@ -182,6 +182,7 @@ jobs:
     steps:
       - uses: calebevans/gha-failure-analysis@main
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           llm-provider: openai
           llm-model: gpt-4o
           llm-api-key: ${{ secrets.OPEN_AI_KEY }}
