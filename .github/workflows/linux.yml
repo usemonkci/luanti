@@ -183,9 +183,9 @@ jobs:
       - uses: calebevans/gha-failure-analysis@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          llm-provider: openai
-          llm-model: gpt-4o
-          llm-api-key: ${{ secrets.OPEN_AI_KEY }}
+          llm-provider: anthropic
+          llm-model: claude-sonnet-4-6
+          llm-api-key: ${{ secrets.CLAUDE_API_KEY }}
           post-pr-comment: false
 
   
